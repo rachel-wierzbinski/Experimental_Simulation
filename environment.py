@@ -33,3 +33,9 @@ class Environment:
     def print_state(self):
         print(self.state)
         print()
+        
+    def is_done(agent_height):
+        # check if there is a collision at a given frame
+        
+        # if game over return false, else return true
+        return False
