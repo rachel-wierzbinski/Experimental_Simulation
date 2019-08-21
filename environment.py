@@ -7,7 +7,14 @@ class Environment:
         self.count_since_obstacle = 0
         
     def step(self):
-        return
+        old_state = self.state()
+        
+        self.update_state()
+        new_state = self.state()
+        
+        reward = self.reward()
+        
+        return old_state, new_state, reward
         
     def update_state(self):
         for i in range(9):
@@ -32,13 +39,18 @@ class Environment:
 
             self.count_since_obstacle += 1
             
+    # TODO
+    def reward():
+        # penalty for dying and reward for accumulating score?
+        return 0
         
-    def print_state(self):
-        print(self.state)
-        print()
-        
+    # TODO
     def is_done(agent_height):
         # check if there is a collision at a given frame
         
         # if game over return false, else return true
         return False
+    
+    def print_state(self):
+        print(self.state)
+        print()

@@ -4,6 +4,8 @@ from agent import Agent
 env = Environment()
 agent = Agent()
 
-for i in range(100):
+FRAMES_TO_RUN = 10
+
+for i in range(FRAMES_TO_RUN):
     env.update_state()
     env.print_state()
