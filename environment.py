@@ -6,6 +6,9 @@ class Environment:
         self.state = np.zeros([2, 10], dtype = int)
         self.count_since_obstacle = 0
         
+    def step(self):
+        return
+        
     def update_state(self):
         for i in range(9):
             self.state[0][i] = self.state[0][i + 1]

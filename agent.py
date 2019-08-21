@@ -1,5 +1,4 @@
 import numpy as np
-import random
 
 class Agent:
     def __init__(self):
@@ -8,6 +7,7 @@ class Agent:
         self.is_jumping = False
         
         self.height = 0
+        self.MAX_HEIGHT = 4
         
         self.q_table = dict()
         
@@ -17,10 +17,10 @@ class Agent:
         
         height = self.height  
         
-        # Jump logic
+        # Jump logic (if not max height keep jumping, fall once you reach max height)
         if is_jumping or is_falling:
             # if you are jumping and haven't reached your max height
-            if is_jumping and height < 4:
+            if is_jumping and height < self.MAX_HEIGHT:
                 self.height += 1
             # if you reached max height, start falling
             elif is_jumping:
