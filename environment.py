@@ -39,17 +39,19 @@ class Environment:
 
             self.count_since_obstacle += 1
             
-    # TODO
-    def reward():
+    def reward(self):
         # penalty for dying and reward for accumulating score?
         return 0
         
     # TODO
-    def is_done(agent_height):
-        # check if there is a collision at a given frame
-        
-        # if game over return false, else return true
-        return False
+    def is_done(self, agent_height):
+        # we can change this function later to work with any matrix (state size)... but let's be lazy for now
+        if agent_height == 0 and self.state[1][0] == 1:
+            return True
+        elif agent_height == 1 and self.state[0][0] == 1:
+            return True
+        else:
+            return False
     
     def print_state(self):
         print(self.state)
