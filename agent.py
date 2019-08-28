@@ -7,7 +7,7 @@ class Agent:
         self.is_jumping = False
         
         self.height = 0
-        self.MAX_HEIGHT = 4
+        self.MAX_HEIGHT = 1
         
         self.q_table = dict()
         

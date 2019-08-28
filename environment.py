@@ -7,10 +7,10 @@ class Environment:
         self.count_since_obstacle = 0
         
     def step(self):
-        old_state = self.state()
+        old_state = self.state
         
         self.update_state()
-        new_state = self.state()
+        new_state = self.state
         
         reward = self.reward()
         
@@ -40,6 +40,7 @@ class Environment:
             self.count_since_obstacle += 1
             
     # TODO
+    @staticmethod
     def reward():
         # penalty for dying and reward for accumulating score?
         return 0
