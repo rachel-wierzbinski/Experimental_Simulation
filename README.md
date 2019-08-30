@@ -11,7 +11,7 @@ The agent file creates a player. The player perform actions such as jumping and 
 #### Visualize_State
 The visualize_state file graphically represents the game canvas, obstacles, and the player created in the environment and agent files described above. The user is able to make our player, Zeke, jump to avoid obstacles by pressing the space bar. Below is the game!
 
-![Alt Text](https://github.com/rachel-wierzbinski/Experimental_Simulation/blob/master/game_visual.gif|width=400)
+![Alt Text](https://github.com/rachel-wierzbinski/Experimental_Simulation/blob/master/game_visual.gif)
 
 #### Q-Learning
 We are currently brushing up on our Python skills and learning more about reinforcement learning. This section will be updated once Q-learning is implemented
