@@ -21,7 +21,7 @@ class Environment:
             self.state[0][i] = self.state[0][i + 1]
             self.state[1][i] = self.state[1][i + 1]
         
-        if self.count_since_obstacle > 3:
+        if self.count_since_obstacle > 8:
             n = random.randint(0, 1)
             
             if n == 0:

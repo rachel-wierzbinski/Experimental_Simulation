@@ -1,5 +1,6 @@
 import pygame
 from environment import Environment
+from agent import Agent
 import time
 
 
@@ -26,6 +27,11 @@ def main():
     # Initialize environment
     env = Environment()
 
+    # Initialize Agent: Zeke
+    agent = Agent()
+    action = 1
+    zeke = pygame.image.load('Zeke.png')
+
     done = False
 
     while not done:
@@ -36,9 +42,19 @@ def main():
                 pygame.quit()
                 quit()
 
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    action = 0
+                    agent.is_jumping = True
+
+            if event.type == pygame.KEYUP:
+                if event.key == pygame.K_SPACE:
+                    action = 1
+                    agent.is_falling = True
+
         # Location of grid squares
         x = 0
-        y = 100
+        y = 0
 
         # Grid square dimensions
         w = 100
@@ -46,7 +62,6 @@ def main():
 
         # Get new state
         old_state, new_state, reward = env.step()
-        env.print_state()
 
         # Draw the grid
         obstacle = 1
@@ -63,8 +78,11 @@ def main():
             y += h
             x = 0
 
+        # Draw Zeke
+        agent.act(action)
+        display.blit(zeke, (0, w * agent.height))
 
-        # Frame rate: 60 frames per second
+        # Frame rate: 10 frames per second
         clock.tick(60)
 
         # Update display
