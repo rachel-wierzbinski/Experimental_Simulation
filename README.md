@@ -14,7 +14,7 @@ The visualize_state file graphically represents the game canvas, obstacles, and 
 ![Alt Text](https://github.com/rachel-wierzbinski/Experimental_Simulation/blob/master/game_visual.gif)
 
 #### Q-Learning
-We are currently brushing up on our Python skills and learning more about reinforcement learning. This section will be updated once Q-learning is implemented
+Coming soon!
 
 #### Contributors
 * Rachel Wierzbinski <br>
